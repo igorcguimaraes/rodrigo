@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucao de Formulas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr>
+    <h1>Formulas Pós Graduação</h1>
+    <p>Horizontal Component of Tension</p>
+    <p>H = T - w . d</p>
+
+    <p>T</p>
+    <input type="number" id="t">
+
+    <p>w</p>
+    <input type="number" id="w">
+
+    <p>d</p>
+    <input type="number" id="d">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+    O Resultado de H é <span></span>
+
+    <hr>
+
+    <p>Tension At any height y</p>
+    <p>T(y) = T - w . (d - y)</p>
+
+    <p>T</p>
+    <input type="number" id="t2">
+    <p>w</p>
+    <input type="number" id="w2">
+    <p>d</p>
+    <input type="number" id="d2">
+    <p>y</p>
+    <input type="number" id="y2">
+    <br><br>
+    <button onclick="calcular1()">Calcular</button>
+    O Resultado T(y) é <span id="resultado"></span>
+
+    <hr>
+
+    <p>Basic Catenary Equation</p>
+    <p>y = H/w [cosh ((w * x)/H) - 1] </p>
+
+    <p>H</p>
+    <input type="number" id="h3">
+    <p>w</p>
+    <input type="number" id="w3">
+    <p>cosh</p>
+    <input type="number" id="cosh3">
+    <p>w</p>
+    <input type="number" id="w-3">
+    <p>x</p>
+    <input type="number" id="x3">
+    <p>H</p>
+    <input type="number" id="h-3">
+    <br><br>
+    <button onclick="calcular2()">Calcular</button>
+    O Resultado y é <span id="resultado3"></span>
+    <hr>
+
+    <script>
+        let n1 = document.querySelector('#t')
+        let n2 = document.querySelector('#w')
+        let n3 = document.querySelector('#d')
+        let resultado = document.querySelector('span')
+
+        function calcular(){
+            resultado.innerHTML = parseFloat(t.value) - (parseFloat(w.value) * parseFloat(d.value));
+        }
+
+        let n4 = document.querySelector('#t2')
+        let n5 = document.querySelector('#w2')
+        let n6 = document.querySelector('#d2')
+        let n7 = document.querySelector('#y2')
+        let resultado1 = document.querySelector('#resultado')
+
+        function calcular1(){
+            resultado1.innerHTML = parseFloat(t2.value) - parseFloat(w2.value) * (parseFloat(d2.value) - parseFloat(y2.value));
+        }
+
+        let n8 = document.querySelector('#h3')
+        let n9 = document.querySelector('#w3')
+        let n10 = document.querySelector('#cosh3')
+        let n11 = document.querySelector('#w-3')
+        let n12 = document.querySelector('#x3')
+        let n13 = document.querySelector('#h-3')
+        let resultado3 = document.querySelector('#resultado3')
+    </script>
+
+
+</body>
+</html>
