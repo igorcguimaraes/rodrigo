@@ -54,11 +54,11 @@
     <p>cosh</p>
     <input type="number" id="cosh3">
     <p>w</p>
-    <input type="number" id="w-3">
+    <input type="number" id="w33">
     <p>x</p>
     <input type="number" id="x3">
     <p>H</p>
-    <input type="number" id="h-3">
+    <input type="number" id="h33">
     <br><br>
     <button onclick="calcular2()">Calcular</button>
     O Resultado y é <span id="resultado3"></span>
@@ -87,10 +87,15 @@
         let n8 = document.querySelector('#h3')
         let n9 = document.querySelector('#w3')
         let n10 = document.querySelector('#cosh3')
-        let n11 = document.querySelector('#w-3')
+        let n11 = document.querySelector('#w33')
         let n12 = document.querySelector('#x3')
-        let n13 = document.querySelector('#h-3')
+        let n13 = document.querySelector('#h33')
         let resultado3 = document.querySelector('#resultado3')
+
+        function calcular2(){
+            resultado3.innerHTML = parseFloat(h3.value) / parseFloat(w3.value) * (parseFloat(cosh3.value) *((parseFloat(w33.value) * parseFloat(x3.value)) / parseFloat(h33.value))-1);
+        }
+
     </script>
 
 
